@@ -4,14 +4,26 @@ using UnityEngine;
 
 public class Player
 {
-    public name;
+    private string name;
+    private int killCount;
 
-    Plyaer(name)
+    public Player(string name)
     {
         this.name = name;
+        this.killCount = 0;
     }
 
-    public String getName()
+    public void addKill()
+    {
+        this.killCount++;
+    }
+
+    public int getKillCount()
+    {
+        return this.killCount;
+    }
+
+    public string getName()
     {
         return this.name;
     }

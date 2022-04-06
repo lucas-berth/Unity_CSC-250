@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -649,12 +649,12 @@ GameObject:
   - component: {fileID: 844785278}
   - component: {fileID: 844785277}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &844785277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,7 +667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7910eac6baa141c3a178cd9c0249f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
 --- !u!135 &844785278
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -767,7 +766,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844785276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.3431492, y: 0.029999733, z: -0.2800001}
+  m_LocalPosition: {x: -5.53, y: 0.029999733, z: 17.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1199,11 +1198,11 @@ GameObject:
   - component: {fileID: 1440103227}
   - component: {fileID: 1440103226}
   - component: {fileID: 1440103225}
-  - component: {fileID: 1440103224}
   - component: {fileID: 1440103229}
+  - component: {fileID: 1440103224}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1217,10 +1216,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1440103223}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7910eac6baa141c3a178cd9c0249f40, type: 3}
+  m_Script: {fileID: 11500000, guid: 64293a2ecf60e4deeb3ef2c380c895fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 2
 --- !u!135 &1440103225
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1291,7 +1290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440103223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.08, y: 0.7, z: 12.7}
+  m_LocalPosition: {x: -6.57, y: 0.7, z: 10.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}
