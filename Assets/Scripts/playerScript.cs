@@ -5,41 +5,34 @@ using UnityEngine;
 public class playerScript : MonoBehaviour
 {
     private Player thePlayer;
+    private Rigidbody rb;
+    public float speed = 20f;
+    private int count = 0;
 
-        // Start is called before the first frame update
-        Vector3 goUp, goDown, goLeft, goRight, goJump;
-        public float speed = 2.0f;
-        private Rigidbody rb;
-        private int count;
-
+    // Start is called before the first frame update
     void Start()
     {
-        thePlayer = new Player("Lucas");
-            //goUp = new Vector3(0.0f, 1.0f, 0.0f);
-            //speed = 2.0f;
+        thePlayer = new Player("Mike");
         rb = this.gameObject.GetComponent<Rigidbody>();
     }
 
     public void DoSomething()
     {
-        print("Do something called");
+        print("Player: Do something called");
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag.Equals("Enemy"))
+        if(collision.gameObject.tag.Equals("enemy"))
         {
-            count++
+            count++;
             if(count == 3)
             {
                 this.thePlayer.addKill();
-                print("Kill count: " + this.thePlayer.getkillCount());
+                print("Kill Count: " + this.thePlayer.getKillCount());
             }
         }
-        
     }
-
-
 
     // Update is called once per frame
     void Update()

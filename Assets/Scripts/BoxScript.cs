@@ -10,23 +10,20 @@ public class BoxScript : MonoBehaviour
     void Start() //like a constructor
     {
         count = 0;
-        print("box collision exit");
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag.Equals("Player"))
         {
             count++;
             if(count == 3)
             {
-                this.gameObject.sendMessage("DoSomething");
+                this.gameObject.SendMessage("DoSomething");
                 Destroy(this.gameObject);
             }
-            
         }
     }
-
 
     // Update is called once per frame
     void Update()
