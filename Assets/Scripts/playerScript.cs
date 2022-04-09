@@ -23,7 +23,7 @@ public class playerScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag.Equals("enemy"))
+        if(collision.gameObject.tag.Equals("Enemy"))
         {
             count++;
             if(count == 3)
@@ -40,28 +40,28 @@ public class playerScript : MonoBehaviour
         //this is the game object that the script is attached to
        if (Input.GetKeyDown("up"))
        {
-           print("up key was pressed");
+           
            rb.velocity = Vector3.forward * speed;
        }
        else if (Input.GetKeyDown("down"))
        {
-           print("down key was pressed");
+           
            rb.velocity = Vector3.back * speed;
        }
        else if (Input.GetKeyDown("left"))
        {
-           print("left key was pressed");
+           
            rb.velocity = Vector3.left * speed;
        }
        else if (Input.GetKeyDown("right"))
        {
-           print("right key was pressed");
+           
            rb.velocity = Vector3.right * speed;
        }
        else if (Input.GetKeyDown("space"))
        {
            rb.velocity = Vector3.up * speed;
        }
-        
+        //removed the print statements because we proved that this works.
     }
 }
