@@ -5,12 +5,15 @@ using UnityEngine;
 public class coreScript : MonoBehaviour
 {
     public Transform EnemyPrefab;
-    public Transform[] spawnPoint;
+    public Transform spawnPoint;
+    public int xPos;
+    public int zPos;
+    public int enemyCount;
 
     public static List<GameObject> theRooms = new List <GameObject>();
     
     //trying to make an array of the spawnpoints
-    spawnPoint = Transform.CompareTo("Enemy");
+    //spawnPoint = Transform.CompareTo("Enemy");
 
     public static void addRoomGO(GameObject go)
     {
@@ -27,20 +30,22 @@ public class coreScript : MonoBehaviour
     void Start()
     {
         //trying to make an array of the spawnpoints
-        spawnPoint = Transform.CompareTo("Enemy");
+        //spawnPoint = Transform.CompareTo("Enemy");
 
 
         for(int i = 0; i < 10; i++)
         {
             print(Random.Range(1, 10));
         }
+        /*
         for(int i = 0; i < 20; i++)
         {
-            spawnEnemys();
+            //spawnEnemys();
+            Instantiate(EnemyPrefab, spawnPoint.position, Quaternion.identity);
         }
+        */
         
-        
-        
+        spawnEnemys();
     }
 
     // Update is called once per frame
@@ -51,9 +56,15 @@ public class coreScript : MonoBehaviour
 
     void spawnEnemys()
     {
-        int index = Random.Range(0, spawnPoint.Length);
+       // int index = Random.Range(0, spawnPoint.Length);
         //var spawnpoints = spawnPoint[index];
 
-        Instantiate(EnemyPrefab, spawnPoint[index].position, Quaternion.identity);
+        while (enemyCount < 20)
+        {
+            xPos = Random.Range(-30, 30);
+            zPos = Random.Range(-30, 30);
+            Instantiate(EnemyPrefab, new Vector3(xPos, 1, zPos), Quaternion.identity);
+            enemyCount += 1;
+        }
     }
 }
