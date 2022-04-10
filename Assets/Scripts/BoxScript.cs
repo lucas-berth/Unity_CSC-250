@@ -34,11 +34,28 @@ public class BoxScript : MonoBehaviour
     void Update()
     {
         //try to make the enemy move by itself
-        rb.velocity = Vector3.forward * speed;
+        //rb.velocity = Vector3.forward * speed;
+        randomPosition();
     }
 
     void randomPosition()
     {
-        
+        int ran = Random.Range(1, 4);
+        if(ran == 1)
+        {
+            rb.velocity = Vector3.forward * speed;
+        }
+        else if(ran == 2)
+        {
+            rb.velocity = Vector3.back * speed;
+        }
+        else if(ran == 3)
+        {
+            rb.velocity = Vector3.left * speed;
+        }
+        else if(ran == 4)
+        {
+            rb.velocity = Vector3.right * speed;
+        }
     }
 }
