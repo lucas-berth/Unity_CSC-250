@@ -33,7 +33,7 @@ public class coreScript : MonoBehaviour
         //spawnPoint = Transform.CompareTo("Enemy");
 
 
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < 20; i++)
         {
             Transform t = Instantiate(EnemyPrefab, spawnPoint.position, Quaternion.identity);
             Rigidbody rb = t.GetComponent<Rigidbody>();

@@ -47,7 +47,7 @@ public class BoxScript : MonoBehaviour
         //rb.velocity = Vector3.forward * speed;
        // randomPosition();
         
-      //  agent.SetDestination(thePlayer.transform.position);
+        agent.SetDestination(thePlayer.transform.position);
     }
 
 
