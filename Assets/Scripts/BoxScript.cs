@@ -7,7 +7,7 @@ using UnityEngine;
 public class BoxScript : MonoBehaviour
 {
     private int count;
-    private Rigidbody rb;
+    public Rigidbody rb;
     public float speed = 5f;
 
     // Start is called before the first frame update
@@ -21,6 +21,7 @@ public class BoxScript : MonoBehaviour
     {
         if(collision.gameObject.tag.Equals("Player"))
         {
+            coreScript.display();
             count++;
             if(count == 3)
             {
@@ -38,8 +39,9 @@ public class BoxScript : MonoBehaviour
         randomPosition();
     }
 
-    void randomPosition()
+    public void randomPosition()
     {
+        //very basic for now, could add some variability within this method. such as making the forward == 1:10
         int ran = Random.Range(1, 4);
         if(ran == 1)
         {

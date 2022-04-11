@@ -64,7 +64,11 @@ public class coreScript : MonoBehaviour
             xPos = Random.Range(-30, 30);
             zPos = Random.Range(-30, 30);
             Instantiate(EnemyPrefab, new Vector3(xPos, 1, zPos), Quaternion.identity);
+            //add enemy to total count
             enemyCount += 1;
+            //make the loop wait 1 second before spawning new enemy
+            //yield return new WaitForSeconds(1);
+           // BoxScript.randomPosition();
         }
     }
 }

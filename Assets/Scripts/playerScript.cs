@@ -16,9 +16,9 @@ public class playerScript : MonoBehaviour
         rb = this.gameObject.GetComponent<Rigidbody>();
     }
 
-    public void DoSomething()
+    public void Display()
     {
-        print("Player: Do something called");
+        print("Player Script Display");
     }
 
     void OnCollisionEnter(Collision collision)
