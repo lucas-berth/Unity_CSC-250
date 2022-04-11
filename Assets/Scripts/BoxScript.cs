@@ -1,20 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 
 
 public class BoxScript : MonoBehaviour
 {
     private int count;
-    public Rigidbody rb;
-    public float speed = 5f;
+    private Rigidbody rb;
+    public float speed = 20f;
+
+    public GameObject thePlayer;
+    private Vector3 playerPosition;
+    private NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start() //like a constructor
     {
         count = 0;
+
         rb = this.gameObject.GetComponent<Rigidbody>();
+        agent = this.gameObject.GetComponent<NavMeshAgent>();
+        //agent.speed = 20f;
+       // agent.Warp(thePlayer.transform.position);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -36,9 +45,14 @@ public class BoxScript : MonoBehaviour
     {
         //try to make the enemy move by itself
         //rb.velocity = Vector3.forward * speed;
-        randomPosition();
+       // randomPosition();
+        
+      //  agent.SetDestination(thePlayer.transform.position);
     }
 
+
+
+    /*
     public void randomPosition()
     {
         //very basic for now, could add some variability within this method. such as making the forward == 1:10
@@ -60,4 +74,5 @@ public class BoxScript : MonoBehaviour
             rb.velocity = Vector3.right * speed;
         }
     }
+    */
 }

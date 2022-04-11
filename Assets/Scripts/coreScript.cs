@@ -35,17 +35,14 @@ public class coreScript : MonoBehaviour
 
         for(int i = 0; i < 10; i++)
         {
-            print(Random.Range(1, 10));
+            Transform t = Instantiate(EnemyPrefab, spawnPoint.position, Quaternion.identity);
+            Rigidbody rb = t.GetComponent<Rigidbody>();
+            rb.velocity = new Vector3(Random.Range(10, 30), 0, Random.Range(10, 30));
+
         }
-        /*
-        for(int i = 0; i < 20; i++)
-        {
-            //spawnEnemys();
-            Instantiate(EnemyPrefab, spawnPoint.position, Quaternion.identity);
-        }
-        */
         
-        spawnEnemys();
+        
+        //spawnEnemys();
     }
 
     // Update is called once per frame
