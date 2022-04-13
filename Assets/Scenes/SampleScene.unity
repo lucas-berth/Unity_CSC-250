@@ -1127,7 +1127,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!54 &1038675212
 Rigidbody:
@@ -2219,13 +2219,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2276878799992378778, guid: 9d1e0a05fd8694b20937ece0536b3574, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2276878801356340816, guid: 9d1e0a05fd8694b20937ece0536b3574, type: 3}
       propertyPath: m_Name
       value: Level 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2276878801356340816, guid: 9d1e0a05fd8694b20937ece0536b3574, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2276878801429861439, guid: 9d1e0a05fd8694b20937ece0536b3574, type: 3}
       propertyPath: m_Name
       value: Level 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276878801429861439, guid: 9d1e0a05fd8694b20937ece0536b3574, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2983321225647857970, guid: 9d1e0a05fd8694b20937ece0536b3574, type: 3}
       propertyPath: m_RootOrder
