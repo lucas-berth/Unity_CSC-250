@@ -10,14 +10,20 @@ public class coreScript : MonoBehaviour
     public int zPos;
     public int enemyCount;
 
-    public static List<GameObject> theRooms = new List <GameObject>();
+    public static List<GameObject> theRoomGos = new List <GameObject>();
+    public static List<Room> theRooms = new List<Room>();
+
+    public static void addRoom(Room theRoom)
+    {
+        coreScript.theRooms.Add(theRoom);
+    }
     
     //trying to make an array of the spawnpoints
     //spawnPoint = Transform.CompareTo("Enemy");
 
     public static void addRoomGO(GameObject go)
     {
-        coreScript.theRooms.Add(go);
+        coreScript.theRoomGos.Add(go);
         print("Added Room");
     }
     public static void display()
