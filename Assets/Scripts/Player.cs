@@ -19,6 +19,10 @@ public class Player
     {
         this.currentRoom = r;
     }
+    public Room getRoom()
+    {
+        return this.currentRoom;
+    }
 
     public void addKill()
     {

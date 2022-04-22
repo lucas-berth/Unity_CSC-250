@@ -13,6 +13,18 @@ public class coreScript : MonoBehaviour
     public static List<GameObject> theRoomGos = new List <GameObject>();
     public static List<Room> theRooms = new List<Room>();
 
+    private static Player currentPlayer = null;
+
+    public static void setPlayer(Player p)
+    {
+        coreScript.currentPlayer = p;
+    }
+
+    public static Player getPlayer()
+    {
+        return coreScript.currentPlayer;
+    }
+
     public static void addRoom(Room theRoom)
     {
         coreScript.theRooms.Add(theRoom);

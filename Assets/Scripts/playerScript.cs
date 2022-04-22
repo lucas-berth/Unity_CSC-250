@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerScript : MonoBehaviour
 {
-    private Player thePlayer;
+    private Player thePlayer = new Player("Lucas");
     private Rigidbody rb;
     public float speed = 20f;
     private int count = 0;
@@ -12,13 +12,19 @@ public class playerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        thePlayer = new Player("Mike");
+        coreScript.setPlayer(thePlayer);
         rb = this.gameObject.GetComponent<Rigidbody>();
     }
 
     public void Display()
     {
         print("Player Script Display");
+    }
+
+
+    public Player getPlayer()
+    {
+        return this.thePlayer;
     }
 
     void OnCollisionEnter(Collision collision)
