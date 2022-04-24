@@ -1254,6 +1254,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7980522744309839364, guid: e46eb03b0a1004fd9b30eb949600d4a4, type: 3}
   m_PrefabInstance: {fileID: 7980522745154310264}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1087405743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087405742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7910eac6baa141c3a178cd9c0249f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  thePlayer: {fileID: 1440103223}
 --- !u!195 &1087405750
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2426,7 +2440,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7980522744309839365, guid: e46eb03b0a1004fd9b30eb949600d4a4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e46eb03b0a1004fd9b30eb949600d4a4, type: 3}
 --- !u!1001 &8208269818466216413
 PrefabInstance:

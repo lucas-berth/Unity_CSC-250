@@ -50,7 +50,7 @@ public class coreScript : MonoBehaviour
         //trying to make an array of the spawnpoints
         //spawnPoint = Transform.CompareTo("Enemy");
 
-
+        /*
         for(int i = 0; i < 20; i++)
         {
             Transform t = Instantiate(EnemyPrefab, spawnPoint.position, Quaternion.identity);
@@ -58,7 +58,7 @@ public class coreScript : MonoBehaviour
             rb.velocity = new Vector3(Random.Range(10, 30), 0, Random.Range(10, 30));
 
         }
-        
+        */
         
         //spawnEnemys();
     }
