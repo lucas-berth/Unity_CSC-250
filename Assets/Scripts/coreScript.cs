@@ -14,6 +14,17 @@ public class coreScript : MonoBehaviour
     public static List<Room> theRooms = new List<Room>();
 
     private static Player currentPlayer = null;
+    private static Enemy currentEnemy = null;
+
+    public static void setEnemy(Enemy e)
+    {
+        coreScript.currentEnemy = e;
+    }
+
+    public static Enemy getEnemy()
+    {
+        return coreScript.currentEnemy;
+    }
 
     public static void setPlayer(Player p)
     {
@@ -36,11 +47,11 @@ public class coreScript : MonoBehaviour
     public static void addRoomGO(GameObject go)
     {
         coreScript.theRoomGos.Add(go);
-        print("Added Room");
+        //print("Added Room");
     }
     public static void display()
     {
-        print("Woot");
+       
     }
 
 

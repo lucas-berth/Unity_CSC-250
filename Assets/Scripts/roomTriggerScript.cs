@@ -14,7 +14,7 @@ public class roomTriggerScript : MonoBehaviour
         
     }
 
-    private void onTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag.Equals("Player"))
         {
@@ -23,7 +23,8 @@ public class roomTriggerScript : MonoBehaviour
         }
         else if(other.gameObject.tag.Equals("Enemy"))
         {
-            print("Enemy entered room " + this.gameObject.ToString());
+            this.thisRoom.setEnemy(coreScript.getEnemy());
+            print("Enemy now in room " + this.thisRoom);
         }
         
     }
