@@ -19,9 +19,9 @@ public class BoxScript : MonoBehaviour
     void Start() //like a constructor
     {
         count = 0;
-
         rb = this.gameObject.GetComponent<Rigidbody>();
         agent = this.gameObject.GetComponent<NavMeshAgent>();
+
         //agent.speed = 20f;
        // agent.Warp(thePlayer.transform.position);
     }
@@ -30,11 +30,9 @@ public class BoxScript : MonoBehaviour
     {
         if(collision.gameObject.tag.Equals("Player"))
         {
-            coreScript.display();
             count++;
             if(count == 3)
             {
-                this.gameObject.SendMessage("DoSomething");
                 Destroy(this.gameObject);
             }
         }
