@@ -7,6 +7,7 @@ using UnityEngine.AI;
 
 public class BoxScript : MonoBehaviour
 {
+    private Enemy theEnemy = new Enemy("rat");
     private int count;
     private Rigidbody rb;
     public float speed = 20f;
@@ -21,6 +22,7 @@ public class BoxScript : MonoBehaviour
         count = 0;
         rb = this.gameObject.GetComponent<Rigidbody>();
         agent = this.gameObject.GetComponent<NavMeshAgent>();
+        coreScript.setEnemy(theEnemy);
 
         //agent.speed = 20f;
        // agent.Warp(thePlayer.transform.position);

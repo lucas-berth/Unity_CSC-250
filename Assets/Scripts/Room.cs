@@ -10,6 +10,7 @@ public class Room
    public Room()
    {
        this.thePlayer = null;
+       this.theEnemy = null;
    }
 
    public void setPlayer(Player p)
@@ -28,6 +29,7 @@ public class Room
    {
       this.theEnemy = e;
       this.theEnemy.setRoom(this);
+      
    }
 
    public Enemy getEnemy()
