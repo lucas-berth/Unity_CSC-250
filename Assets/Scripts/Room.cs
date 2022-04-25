@@ -1,9 +1,10 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class Room
 {
+
    private Player thePlayer;
    private Enemy theEnemy;
 

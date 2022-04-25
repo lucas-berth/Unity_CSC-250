@@ -10,11 +10,16 @@ public class coreScript : MonoBehaviour
     public int zPos;
     public int enemyCount;
 
-    public static List<GameObject> theRoomGos = new List <GameObject>();
+    public static List<GameObject> theRoomsGos = new List <GameObject>();
     public static List<Room> theRooms = new List<Room>();
 
     private static Player currentPlayer = null;
     private static Enemy currentEnemy = null;
+
+    public static GameObject getRoom()
+    {
+        return coreScript.theRoomsGos.ToArray[0];
+    }
 
     public static void setEnemy(Enemy e)
     {
