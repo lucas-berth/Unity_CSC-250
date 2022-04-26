@@ -21,20 +21,28 @@ public class coreScript : MonoBehaviour
         return coreScript.theRoomsGos[0];
     }
 
+
+    /*
     public static GameObject returnRoom()
     {
+        
         for(int i = 0; i < theRoomsGos.Count; i++)
         {
-            if(theRoomsGos[i] = currentPlayer.getRoom())
+            var listOfRooms = theRoomsGos[i];
+            if(listOfRooms = currentEnemy.getRoom())
             {
                 return coreScript.theRoomsGos[i];
             }
-            else if(theRoomsGos[i] = currentEnemy.getRoom())
+            else if(listOfRooms = currentPlayer.getRoom())
             {
                 return coreScript.theRoomsGos[i];
             }
+            
         }
+        return 0;
     }
+
+    */
 
     public static void setEnemy(Enemy e)
     {

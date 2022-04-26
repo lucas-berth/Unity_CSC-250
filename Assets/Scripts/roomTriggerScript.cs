@@ -35,13 +35,13 @@ public class roomTriggerScript : MonoBehaviour
         if(other.gameObject.tag.Equals("Enemy"))
         {
             print("Room destroyed");
-           // Destroy(coreScript.getEnemy.getRoom());
+            Destroy(coreScript.getRoom());
         }
         else if(other.gameObject.tag.Equals("Player"))
         {
             //game does get into this statement but probably does not have the correct room
             print("Player Destroyed Room");
-            //Destroy(coreScript.getRoom().gameObject);
+            Destroy(coreScript.getRoom());
         }
         
     }
