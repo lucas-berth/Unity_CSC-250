@@ -18,7 +18,7 @@ public class coreScript : MonoBehaviour
 
     public static GameObject getRoom()
     {
-        return coreScript.theRoomsGos.ToArray[0];
+        return coreScript.theRoomsGos[0];
     }
 
     public static void setEnemy(Enemy e)
@@ -51,7 +51,7 @@ public class coreScript : MonoBehaviour
 
     public static void addRoomGO(GameObject go)
     {
-        coreScript.theRoomGos.Add(go);
+        coreScript.theRoomsGos.Add(go);
         //print("Added Room");
     }
     public static void display()

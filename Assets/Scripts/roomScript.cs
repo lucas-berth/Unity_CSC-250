@@ -15,6 +15,19 @@ public class roomScript : MonoBehaviour
         print("Room Entered: " + this.gameObject.ToString());
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag.Equals("Enemy"))
+        {
+            Destroy(other.gameObject);
+        }
+        else if(other.gameObject.tag.Equals("Player"))
+        {
+            Destroy(other.gameObject);
+        }
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
