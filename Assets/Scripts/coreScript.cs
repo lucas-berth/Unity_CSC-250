@@ -28,7 +28,7 @@ public class coreScript : MonoBehaviour
         
         for(int i = 0; i < theRoomsGos.Count; i++)
         {
-            var listOfRooms = theRoomsGos[i];
+           // var listOfRooms = theRoomsGos[i];
             if(listOfRooms = currentEnemy.getRoom())
             {
                 return coreScript.theRoomsGos[i];
