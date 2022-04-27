@@ -7,9 +7,10 @@ public class roomTriggerScript : MonoBehaviour
     private Room thisRoom;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        this.thisRoom = new Room();
+        coreScript.addRoomTriggerGo(this.gameObject);
+        this.thisRoom = new Room(this.gameObject);
         coreScript.addRoom(this.thisRoom);
         
     }
@@ -30,6 +31,8 @@ public class roomTriggerScript : MonoBehaviour
     }
 
 
+    /*
+
     private void OnTriggerExit(Collider other)
     {
         if(other.gameObject.tag.Equals("Enemy"))
@@ -45,6 +48,8 @@ public class roomTriggerScript : MonoBehaviour
         }
         
     }
+
+    */
 
     // Update is called once per frame
     void Update()

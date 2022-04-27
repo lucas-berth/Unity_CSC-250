@@ -11,14 +11,18 @@ public class coreScript : MonoBehaviour
     public int enemyCount;
 
     public static List<GameObject> theRoomsGos = new List <GameObject>();
+    private static List<GameObject> theRoomTriggerGos = new List<GameObject>();
     public static List<Room> theRooms = new List<Room>();
 
     private static Player currentPlayer = null;
     private static Enemy currentEnemy = null;
 
-    public static GameObject getRoom()
+    public static void destroyRoomGOGivenTrigger(GameObject roomTrigger)
     {
-        return coreScript.theRoomsGos[0];
+        int indexOfRoomTrigger = theRoomTriggerGos.IndexOf(roomTrigger); //index of will replace the need for a loop 
+        Destroy(coreScript.theRoomsGos[indexOfRoomTrigger]);
+        coreScript.theRoomTriggerGos.RemoveAt(indexOfRoomTrigger);
+        coreScript.theRoomsGos.RemoveAt(indexOfRoomTrigger);
     }
 
 
@@ -77,6 +81,12 @@ public class coreScript : MonoBehaviour
         coreScript.theRoomsGos.Add(go);
         //print("Added Room");
     }
+
+    public static void addRoomTriggerGo(GameObject go)
+    {
+        coreScript.theRoomTriggerGos.Add(go);
+    }
+
     public static void display()
     {
        
