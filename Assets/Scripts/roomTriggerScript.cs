@@ -5,6 +5,7 @@ using UnityEngine;
 public class roomTriggerScript : MonoBehaviour
 {
     private Room thisRoom;
+    public GameObject roomGO;
     
     // Start is called before the first frame update
     void Awake()
@@ -28,6 +29,11 @@ public class roomTriggerScript : MonoBehaviour
             print("Enemy now in room " + this.thisRoom);
         }
         
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Destroy(this.roomGO);
     }
 
 
